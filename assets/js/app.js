@@ -7,7 +7,7 @@ function initialScreen() {
 
 initialScreen();
 
-//Create a function, generateHTML(), that is triggered by the start button, and generates the HTML seen on the project video...
+
 
 $("body").on("click", ".start-button", function(event){
 	event.preventDefault();  // added line to test issue on GitHub Viewer
@@ -16,7 +16,7 @@ $("body").on("click", ".start-button", function(event){
 
 	timerWrapper();
 
-}); // Closes start-button click
+}); 
 
 $("body").on("click", ".answer", function(event){
 	//answeredQuestion = true;
@@ -32,14 +32,14 @@ $("body").on("click", ".answer", function(event){
 		clearInterval(theClock);
 		generateLoss();
 	}
-}); // Close .answer click
+}); 
 
 $("body").on("click", ".reset-button", function(event){
 
 	resetGame();
-}); // Closes reset-button click
+}); 
 
-});  //  Closes jQuery wrapper
+});  
 
 function generateLossDueToTimeOut() {
 	unansweredTally++;
@@ -63,7 +63,7 @@ function generateLoss() {
   "<p class='text-center'>Wrong! The correct answer is: "+ correctAnswers[questionCounter] + "</p>" +
   "<img class='center-block img-wrong' src='assets/images/rm.png'>";
 	$(".mainArea").html(gameHTML);
-	setTimeout(wait, 3000); //  change to 4000 or other amount
+	setTimeout(wait, 3000);
 }
 
 function generateHTML() {
